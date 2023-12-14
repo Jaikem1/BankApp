@@ -1,4 +1,3 @@
-package src;
 
 public class TransactionFactory {
     public static Transaction createTransaction(String type, String transactionID, double amount, int accountNumber, Integer recipientAccountNumber) {

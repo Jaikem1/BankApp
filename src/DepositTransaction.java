@@ -1,4 +1,3 @@
-package src;
 public class DepositTransaction extends Transaction {
     public DepositTransaction(String transactionID, double amount, int accountNumber) {
         super(transactionID, amount, accountNumber);

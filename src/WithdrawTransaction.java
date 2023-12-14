@@ -1,4 +1,3 @@
-package src;
 
 public class WithdrawTransaction extends Transaction {
     public WithdrawTransaction(String transactionID, double amount, int accountNumber) {

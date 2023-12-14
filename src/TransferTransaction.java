@@ -1,4 +1,3 @@
-package src;
 
 public class TransferTransaction extends Transaction {
     private int recipientAccountNumber;
