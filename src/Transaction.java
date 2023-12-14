@@ -1,11 +1,15 @@
-public class Transaction {
-    private String transactionID;
-    private String type;
-    private String timeStamp;
-    private double amount;
-    private int accountNumber;
+package src;
 
-    public void getTransactionDetails(){
+public abstract class Transaction {
+    protected String transactionID;
+    protected double amount;
+    protected int accountNumber;
 
+    public Transaction(String transactionID, double amount, int accountNumber) {
+        this.transactionID = transactionID;
+        this.amount = amount;
+        this.accountNumber = accountNumber;
     }
+
+    public abstract void processTransaction();
 }
