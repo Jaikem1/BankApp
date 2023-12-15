@@ -5,6 +5,10 @@ public class Customer {
     private String customerPhone;
     private int customerID;
 
+    public void createCustomer(){
+
+    }
+
     public void withdraw(double amount, int accountNumber){
 
     }
