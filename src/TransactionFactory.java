@@ -1,6 +1,6 @@
 
 public class TransactionFactory {
-    public static Transaction createTransaction(String type, String transactionID, double amount, int accountNumber, Integer recipientAccountNumber) {
+    public static Transaction createTransaction(String type, String transactionID, double amount, long accountNumber, Integer recipientAccountNumber) {
         switch (type) {
             case "WITHDRAW":
                 return new WithdrawTransaction(transactionID, amount, accountNumber);
