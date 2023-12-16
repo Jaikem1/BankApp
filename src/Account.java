@@ -28,7 +28,7 @@ public class Account {
         return minAccountNumber + (long) (Math.random() * (maxAccountNumber - minAccountNumber + 1));
     }
 
-    public String searchAccount(Long accountNumber) {
+    public void searchAccount(Long accountNumber) {
         this.accountNumber = accountNumber;
         String stringAccountNumber = String.valueOf(accountNumber);
 
@@ -41,14 +41,13 @@ public class Account {
                     String name = data[0];
                     String balanceOnAccount = data[data.length - 1];
                     System.out.println("Namn: " + name + "\nKontonummer: " + accountNumber + "\nSaldo: " + balanceOnAccount);
-                    return stringAccountNumber;
+                    return;
                 }
             }
             System.out.println("Kontonummer " + accountNumber + " kunde inte hittas");
         } catch (IOException e) {
             System.err.println("Fel! Kunde inte läsa från fil. " + e.getMessage());
         }
-        return stringAccountNumber;
     }
 
     public long getAccountDetails(){

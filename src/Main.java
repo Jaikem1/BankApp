@@ -48,8 +48,8 @@ public class Main {
             switch (response) {
                 case 1:
                     System.out.println("Skriv kundens namn: ");
-                    String custumerName = scanner.next();
-                    account.createAccount(custumerName);
+                    String customerName = scanner.next();
+                    account.createAccount(customerName);
                     System.out.println("Kund skapad med kontonummer: " + account.getAccountDetails());
                     break;
                 case 2:
