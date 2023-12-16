@@ -1,17 +1,10 @@
 import java.io.*;
-import java.util.Scanner;
 
 public class Account {
-
-    private Customer accountHolder;
     private long accountNumber;
     private double balance;
     private final String filePath = "src/AccountList.txt";
     private String name;
-
-    public void updateAmount(double amount){
-
-    }
 
     public void createAccount(String name){
         this.name = name;
@@ -44,13 +37,14 @@ public class Account {
             while ((readLine = reader.readLine()) != null) {
                 String[] data = readLine.split(",");
 
-                if (data.length > 1 && data[1].equals(stringAccountNumber)) {
+                if (data.length > 1 && data[1].trim().equals(stringAccountNumber)) {
+                    String name = data[0];
                     String balanceOnAccount = data[data.length - 1];
-                    System.out.println("Pengar på konto " + accountNumber + " är: " + balanceOnAccount);
+                    System.out.println("Namn: " + name + "\nKontonummer: " + accountNumber + "\nSaldo: " + balanceOnAccount);
                     return;
                 }
             }
-            System.out.println("Kontnummer " + accountNumber + " kunde inte hittas");
+            System.out.println("Kontonummer " + accountNumber + " kunde inte hittas");
         } catch (IOException e) {
             System.err.println("Fel! Kunde inte läsa från fil. " + e.getMessage());
         }
@@ -59,5 +53,4 @@ public class Account {
     public long getAccountDetails(){
         return accountNumber;
     }
-
 }

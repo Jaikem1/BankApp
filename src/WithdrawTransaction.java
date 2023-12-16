@@ -1,6 +1,5 @@
-
 public class WithdrawTransaction extends Transaction {
-    public WithdrawTransaction(String transactionID, double amount, int accountNumber) {
+    public WithdrawTransaction(String transactionID, double amount, long accountNumber) {
         super(transactionID, amount, accountNumber);
     }
 
@@ -12,17 +11,9 @@ public class WithdrawTransaction extends Transaction {
             double newBalance = currentBalance - amount;
             updateAccountBalance(accountNumber, newBalance);
             System.out.println("Withdrawn " + amount + " from account " + accountNumber);
+            System.out.println("Balance: " + newBalance);
         } else {
-            System.out.println("Insufficient funds for withdrawal.");
+            System.out.println("Insufficient funds for withdrawal. Current balance: " + currentBalance);
         }
-    }
-
-    private double getAccountBalance(int accountNumber) {
-        // Logic to retrieve account balance from database
-        return 0.0;
-    }
-
-    private void updateAccountBalance(int accountNumber, double newBalance) {
-        // Logic to update account balance in the database
     }
 }

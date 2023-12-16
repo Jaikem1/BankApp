@@ -1,8 +1,7 @@
-
 public class TransferTransaction extends Transaction {
-    private int recipientAccountNumber;
+    private long recipientAccountNumber;
 
-    public TransferTransaction(String transactionID, double amount, int accountNumber, int recipientAccountNumber) {
+    public TransferTransaction(String transactionID, double amount, long accountNumber, long recipientAccountNumber) {
         super(transactionID, amount, accountNumber);
         this.recipientAccountNumber = recipientAccountNumber;
     }
@@ -24,16 +23,5 @@ public class TransferTransaction extends Transaction {
             System.out.println("Insufficient funds for transfer.");
         }
     }
-
-
-    private double getAccountBalance(int accountNumber) {
-        // Logic to retrieve account balance from database
-        return 0.0;
-    }
-
-    private void updateAccountBalance(int accountNumber, double newBalance) {
-        // Logic to update account balance in the database
-    }
 }
-
 
