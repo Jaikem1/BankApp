@@ -74,6 +74,7 @@ public class Main {
             System.out.println("3. Gör en överföring");
             System.out.println("4. Starta ett konto");
             System.out.println("5. Se kontoinfo");
+            System.out.println("6. Avsluta");
             System.out.print("Skriv ditt alternativ: ");
 
             response = scanner.nextInt();
@@ -115,6 +116,11 @@ public class Main {
                     System.out.println("Skriv ditt kontonummer: ");
                     Long responseLong = scanner.nextLong();
                     account.searchAccount(responseLong);
+                    break;
+                case 6:
+                    System.out.println("Programmet avslutas");
+                    scanner.close();
+                    System.exit(0);
                 default:
                     break;
             }
