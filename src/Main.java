@@ -85,7 +85,7 @@ public class Main {
                     double withdrawalAmount = scanner.nextDouble();
                     System.out.println("Skriv ditt kontonummer: ");
                     long withdrawalAccountNumber = scanner.nextLong();
-                    WithdrawTransaction withdrawal = new WithdrawTransaction(transactionID, withdrawalAmount, withdrawalAccountNumber);
+                    Transaction withdrawal = TransactionFactory.createTransaction("WITHDRAW", transactionID, withdrawalAmount, withdrawalAccountNumber, null);
                     withdrawal.processTransaction();
                     break;
                 case 2:
@@ -93,7 +93,7 @@ public class Main {
                     double depositAmount = scanner.nextDouble();
                     System.out.println("Skriv ditt kontonummer: ");
                     long depositAccountNumber = scanner.nextLong();
-                    DepositTransaction deposit = new DepositTransaction(transactionID, depositAmount, depositAccountNumber);
+                    Transaction deposit = TransactionFactory.createTransaction("DEPOSIT", transactionID, depositAmount, depositAccountNumber, null);
                     deposit.processTransaction();
                     break;
                 case 3:
