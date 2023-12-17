@@ -31,10 +31,10 @@ public class TransactionTest {
             System.out.print("Enter account number: ");
             int accountNumber = scanner.nextInt();
 
-            Integer recipientAccountNumber = null;
+            Long recipientAccountNumber = null;
             if (choice == 3) {
                 System.out.print("Enter recipient account number: ");
-                recipientAccountNumber = scanner.nextInt();
+                recipientAccountNumber = scanner.nextLong();
             }
 
             try {
